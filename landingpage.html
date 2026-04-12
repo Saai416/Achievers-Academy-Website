@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Achievers Academy | Empowering Young Minds</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#eeedf4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f4f3fa",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#855300",
+                        "primary": "#00236f",
+                        "surface-container-high": "#e9e7ef",
+                        "on-surface": "#1a1b21",
+                        "on-tertiary-fixed": "#002113",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "outline-variant": "#c5c5d3",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-primary-fixed-variant": "#264191",
+                        "surface-variant": "#e3e1e9",
+                        "tertiary": "#00311f",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#444651",
+                        "surface-container-highest": "#e3e1e9",
+                        "secondary-container": "#fea619",
+                        "inverse-on-surface": "#f1f0f7",
+                        "secondary-fixed": "#ffddb8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#00164e",
+                        "on-background": "#1a1b21",
+                        "primary-fixed": "#dce1ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-dim": "#dad9e1",
+                        "surface-tint": "#4059aa",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "inverse-surface": "#2f3036",
+                        "on-tertiary-container": "#27c38a",
+                        "surface": "#faf8ff",
+                        "outline": "#757682",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-container": "#90a8ff",
+                        "primary-container": "#1e3a8a",
+                        "on-secondary-container": "#684000",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b6c4ff",
+                        "tertiary-container": "#004a31",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "tertiary-fixed": "#6ffbbe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #00236f 0%, #1e3a8a 100%);
+        }
+    </style>
+    <style>
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .animate-pulse-green {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-black text-blue-900 dark:text-blue-200 font-headline tracking-tight">
+                Achievers Academy
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-manrope tracking-tight font-bold text-blue-900 dark:text-blue-400 border-b-2 border-amber-600 pb-1"
+                    href="#">Home</a>
+                <a class="font-manrope tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-all"
+                    href="#about">About</a>
+                <a class="font-manrope tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-all"
+                    href="#programs">Programs</a>
+                <a class="font-manrope tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-all"
+                    href="#why-us">Why Us</a>
+                <a class="font-manrope tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-all"
+                    href="#reviews">Reviews</a>
+                <a class="font-manrope tracking-tight font-bold text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-all"
+                    href="#contact">Contact</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold hover:scale-95 duration-200 shadow-lg shadow-primary/20 transition-all">
+                Enroll Now
+            </button>
+        </nav>
+    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[921px] flex items-center overflow-hidden px-8">
+            <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+                <div class="z-10">
+                    <span
+                        class="inline-block py-1 px-4 rounded-full bg-secondary-container text-on-secondary-container text-sm font-bold mb-6 tracking-wide">EXCELLENCE
+                        IN CHENNAI</span>
+                    <h1
+                        class="text-5xl md:text-7xl font-extrabold font-headline text-primary leading-[1.1] mb-6 tracking-tight">
+                        Empower Young Minds, Build <span class="text-secondary">Successful Futures</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        Leading CBSE and State Board tuition in Chennai. We blend academic rigor with personalized care
+                        to shape the leaders of tomorrow.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:scale-95 transition-transform flex items-center gap-2 shadow-xl shadow-primary/30">
+                            Explore Programs <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-surface-container-high text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container-highest transition-colors">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img alt="A focused student studying" class="w-full h-[500px] object-cover"
+                            data-alt="a young bright student smiling while studying with books in a modern sunlit library with soft bokeh background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvfhhpR8ElABedXgcDZNUs9btvnHAJguWv2jqU35WkNgAOnDfHxbyCUq5OwI953m_rJikf7LWSzowpIPL47aws_oTW6GL9pLWU7cQNjJKFIVPGKqz9kbek1DRf1vMOtWgkXCMRnS46zpehr_ApbhAQxZJ2TpF8indIaVZTfk4grjEo9cY4Y8iUfqAnj7FSTE1Zf6QtrHKCWia7RPELP7JjEIeBQb1t3RRyJOtarhrV_GbzAx0ziF5JKsW-bYVUvuW8iQ-MShp4NDU" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute top-20 right-0 w-96 h-96 bg-secondary-fixed/20 blur-[100px] rounded-full -z-10"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-fixed/30 blur-[80px] rounded-full -z-10"></div>
+        </section>
+        <!-- About Section -->
+        <section class="py-24 bg-surface-container-low" id="about">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl font-extrabold font-headline text-primary mb-4">About Achievers Academy</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">
+                        Chennai's premier destination for holistic academic growth. We don't just teach; we inspire
+                        students to reach their maximum potential through a bespoke educational framework.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline mb-4 text-primary">Experienced Educators</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Our faculty comprises subject matter experts
+                            dedicated to simplifying complex concepts for every learner.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined text-3xl">psychology</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline mb-4 text-primary">Personalized Learning</h3>
+                        <p class="text-on-surface-variant leading-relaxed">We understand that every child is unique,
+                            offering tailored attention to bridge learning gaps effectively.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-6 group-hover:bg-tertiary-container group-hover:text-tertiary-fixed-dim transition-colors">
+                            <span class="material-symbols-outlined text-3xl">star</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-headline mb-4 text-primary">Holistic Development</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Beyond textbooks, we focus on building
+                            confidence, critical thinking, and a lifelong love for learning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Programs Section -->
+        <section class="py-24" id="programs">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-xl">
+                        <h2 class="text-4xl font-extrabold font-headline text-primary mb-4">Specialized Programs</h2>
+                        <p class="text-on-surface-variant text-lg">Rigorous curriculum designed to align perfectly with
+                            current board requirements and future career paths.</p>
+                    </div>
+
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- CBSE Card -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-primary-container text-white p-1">
+                        <div class="bg-primary p-8 rounded-[1.4rem] h-full">
+                            <h3 class="text-2xl font-bold font-headline mb-4">CBSE Board Tuition</h3>
+                            <p class="text-blue-100/80 mb-8">Comprehensive coverage for classes 6-12 following the
+                                latest NCERT guidelines and examination patterns.</p>
+                            <ul class="space-y-3 mb-10">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-tertiary-fixed-dim text-sm">check_circle</span>
+                                    Maths &amp; Science focus</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-tertiary-fixed-dim text-sm">check_circle</span>
+                                    Mock Exam series</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-tertiary-fixed-dim text-sm">check_circle</span>
+                                    Concept clarity sessions</li>
+                            </ul>
+                            <img alt="CBSE books" class="w-full h-48 object-cover rounded-xl mt-4 transition-all"
+                                data-alt="close up of neatly stacked colorful textbooks and a pair of eyeglasses on a wooden table in a bright study area"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_XRkxPNNX4-hciZ3JM8tszalvKQfujWrnEV4FcH84kLIaLYtEo73zroPk68ySEuQV45HGXnPUcw5Z7ZFQF1vMAvEMaO59dQ49kY32okhYAbXljJuSvic94h4cn75uPqJJ3BXLMgDvuaEgT6Fvtv8XquY76SiQOp3kRFjolFgNSffXl1LIFl3RhW912X_I_PohtEve-Pxa8hB-KHeCC6FsmMb7sJHwr66KfnNSTtdHhqZtgmpgS7ARG9BWGJ1d5Jiz9nlFzSR9ETQ" />
+                        </div>
+                    </div>
+                    <!-- State Board Card -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-secondary-container text-white p-1">
+                        <div class="bg-secondary p-8 rounded-[1.4rem] h-full">
+                            <h3 class="text-2xl font-bold font-headline mb-4">State Board Tuition</h3>
+                            <p class="text-orange-100/80 mb-8">Specialized training for Tamil Nadu State Board students
+                                focusing on complete syllabus coverage, accuracy and scoring techniques.</p>
+                            <ul class="space-y-3 mb-10">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-primary-fixed text-sm">check_circle</span>
+                                    Complete syllabus coverage</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-primary-fixed text-sm">check_circle</span>Language
+                                    support</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-primary-fixed text-sm">check_circle</span>
+                                    Previous year solving</li>
+                            </ul>
+                            <img alt="Student writing" class="w-full h-48 object-cover rounded-xl mt-4 transition-all"
+                                data-alt="high angle view of a student writing in a notebook with a pen in a clean and organized workspace"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUrQy-7R6A11AkFmsWZxx830jfrlw7jR50hTthLAEPNd0dlCIp0VC0vCR872_OBlO3tWCExitHNRZ5V5SHDzJZaXerrgPRyj5lkIM1fkQUYR-QU2pRSmdtzsM6l_TpOuXFs9_i26yIsIgw_rHtLpYXtmavDFA35XljGImzviNLoEmdWeflklgGyq2Wph5vkDT9UN-ZY6VcF0edeHJq2tb4EB4KWRexYTpa1yL7rzRsTTLj5PIZej7q1DPtw1vXtxYHw4Wcc0_M9rk" />
+                        </div>
+                    </div>
+                    <!-- Skill Development -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-tertiary-container text-white p-1">
+                        <div class="bg-tertiary p-8 rounded-[1.4rem] h-full">
+                            <h3 class="text-2xl font-bold font-headline mb-4">Skill Development</h3>
+                            <p class="text-emerald-100/80 mb-8">Workshops and courses aimed at building soft skills,
+                                communication, and cognitive abilities.</p>
+                            <ul class="space-y-3 mb-10">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed text-sm">check_circle</span>
+                                    Public Speaking</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed text-sm">check_circle</span>
+                                    Logical Reasoning</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-secondary-fixed text-sm">check_circle</span>
+                                    Career Counseling</li>
+                            </ul>
+                            <img alt="Group discussion" class="w-full h-48 object-cover rounded-xl mt-4 transition-all"
+                                data-alt="a diverse group of students engaged in a lively discussion around a circular table in a modern workshop space"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjVLwtemo6ZXWJPHz1DS0Jy1LSmtjLSf6DDS4G7ygiEy7oBVmBfnXgd19LJxhC74qJ7iE-xlCxhQTmC1D9jjy8IkA3xy4aw1h016hKq7xyrZaaLe5THb1HgoRC1V5bbasr7-Tz4TqNeUwlJAIzVoYkjvw1jCAfITvGuSFfmYpcRVV9dY8bVxS-ahV57Hnmvw-b-XT3V7LFmkegIQ2s4xbvQEkybMiNdyrH8mJ5QacKipjrxbgNFwlv6ZqwsA3PxAROm738OWzev9E" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us Section -->
+        <section class="py-24 bg-surface" id="why-us">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-extrabold font-headline text-primary mb-8">Why Parents Trust Us</h2>
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <!-- Feature 1 -->
+                            <div class="flex flex-col gap-3">
+                                <div class="text-secondary">
+                                    <span class="material-symbols-outlined text-4xl">favorite</span>
+                                </div>
+                                <h4 class="font-bold text-lg">Caring Teachers</h4>
+                                <p class="text-sm text-on-surface-variant">Educators who care about more than just
+                                    marks.</p>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="flex flex-col gap-3">
+                                <div class="text-primary">
+                                    <span class="material-symbols-outlined text-4xl">military_tech</span>
+                                </div>
+                                <h4 class="font-bold text-lg">Strong Leadership</h4>
+                                <p class="text-sm text-on-surface-variant">Guided by experts with decades of education
+                                    experience.</p>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div class="flex flex-col gap-3">
+                                <div class="text-tertiary">
+                                    <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                                </div>
+                                <h4 class="font-bold text-lg">Quality Education</h4>
+                                <p class="text-sm text-on-surface-variant">Premium study materials and modern pedagogy.
+                                </p>
+                            </div>
+                            <!-- Feature 4 -->
+                            <div class="flex flex-col gap-3">
+                                <div class="text-secondary">
+                                    <span class="material-symbols-outlined text-4xl">bolt</span>
+                                </div>
+                                <h4 class="font-bold text-lg">Skill Focus</h4>
+                                <p class="text-sm text-on-surface-variant">Integrating practical skills into daily
+                                    learning.</p>
+                            </div>
+                            <!-- Feature 5 -->
+                            <div class="flex flex-col gap-3">
+                                <div class="text-primary">
+                                    <span class="material-symbols-outlined text-4xl">domain</span>
+                                </div>
+                                <h4 class="font-bold text-lg">Well-Maintained</h4>
+                                <p class="text-sm text-on-surface-variant">A safe, clean, and vibrant campus
+                                    environment.</p>
+                            </div>
+                            <!-- Feature 6 -->
+                            <div class="flex flex-col gap-3">
+                                <div class="text-tertiary">
+                                    <span class="material-symbols-outlined text-4xl">badge</span>
+                                </div>
+                                <h4 class="font-bold text-lg">Professional Staff</h4>
+                                <p class="text-sm text-on-surface-variant">Certified teachers with verified track
+                                    records.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="rounded-[2.5rem] overflow-hidden">
+                            <img alt="Achievers Academy Campus" class="w-full h-auto object-contain bg-white"
+                                src="banner.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="py-24 bg-surface-container-low" id="reviews">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold font-headline text-primary mb-4">Voice of Achievers</h2>
+                    <p class="text-on-surface-variant">Listen to the experiences of our students and their proud
+                        parents.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-surface-container-lowest p-10 rounded-3xl shadow-sm">
+                        <div class="flex text-secondary-container mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface mb-8 italic">"The personalized attention my daughter received at
+                            Achievers Academy was transformative. Her math grades improved from C to A in just one
+                            term."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary-fixed"></div>
+                            <div>
+                                <div class="font-bold text-primary">Mrs. Lakshmi R.</div>
+                                <div class="text-xs text-on-surface-variant">Parent of Grade 10 Student</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="bg-surface-container-lowest p-10 rounded-3xl shadow-sm">
+                        <div class="flex text-secondary-container mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface mb-8 italic">"The teachers here make even the hardest chemistry
+                            problems feel easy. I actually enjoy studying now, which I never thought would happen!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-secondary-fixed"></div>
+                            <div>
+                                <div class="font-bold text-primary">Arjun K.</div>
+                                <div class="text-xs text-on-surface-variant">Grade 12 (CBSE)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="bg-surface-container-lowest p-10 rounded-3xl shadow-sm">
+                        <div class="flex text-secondary-container mb-4">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface mb-8 italic">"Professional, well-organized, and the campus environment
+                            is very conducive to learning. Highly recommended for State Board students."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-tertiary-fixed"></div>
+                            <div>
+                                <div class="font-bold text-primary">Mr. Suresh P.</div>
+                                <div class="text-xs text-on-surface-variant">Parent of Grade 9 Student</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-24 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div
+                    class="hero-gradient rounded-[3rem] p-12 md:p-24 text-center text-on-primary relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-4xl md:text-6xl font-extrabold font-headline mb-8">Ready to Transform Your
+                            <br /> Academic Journey?
+                        </h2>
+                        <p class="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">Join the hundreds of successful
+                            students in Chennai who have unlocked their potential with our guidance.</p>
+                        <button
+                            class="bg-secondary-container text-on-secondary-container px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-black/20">
+                            Enroll Now
+                        </button>
+                    </div>
+                    <!-- Decorative Background for CTA -->
+                    <div class="absolute top-0 right-0 opacity-10">
+                        <span class="material-symbols-outlined text-[300px]">school</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-slate-950 font-inter text-sm pt-20 pb-12" id="contact">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+            <div>
+                <div class="text-xl font-bold text-blue-900 dark:text-blue-200 mb-6">Achievers Academy</div>
+                <p class="text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
+                    Excellence in Education. Empowering the next generation of leaders with premium tuition and holistic
+                    development in the heart of Chennai.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined">share</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary dark:text-blue-400 mb-6">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Programs</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">About Us</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Success Stories</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Faculty</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary dark:text-blue-400 mb-6">Legal</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Terms of Service</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Contact Us</a></li>
+                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-opacity opacity-80 hover:opacity-100"
+                            href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-primary dark:text-blue-400 mb-6">Contact Info</h4>
+                <div class="space-y-4 text-slate-500 dark:text-slate-400">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-secondary">call</span>
+                        <span>9676474723 / 9384794087</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[#10B981]">chat</span>
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-[#10B981] uppercase tracking-tighter">WhatsApp</span>
+                            <span>9676474723 / 9384794087</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-secondary">location_on</span>
+                        <span>Puzhuthivakkam, Madipakkam,<br />Chennai, Tamil Nadu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+            <p class="text-slate-500 dark:text-slate-400">© 2024 Achievers Academy. Excellence in Education.</p>
+        </div>
+    </footer>
+    <a aria-label="Contact on WhatsApp"
+        class="fixed bottom-8 right-8 z-[60] bg-[#10B981] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 animate-pulse-green group"
+        href="https://wa.me/919676474723" target="_blank">
+        <svg class="w-8 h-8 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+            </path>
+        </svg>
+        <span
+            class="absolute right-full mr-4 bg-white text-on-surface px-4 py-2 rounded-lg text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat
+            with us!</span>
+    </a>
+</body>
+
+</html>
