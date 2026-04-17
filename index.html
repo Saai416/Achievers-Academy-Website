@@ -19,6 +19,9 @@
             darkMode: "class",
             theme: {
                 extend: {
+                    screens: {
+                        'xs': '400px',
+                    },
                     "colors": {
                         "surface-container": "#eeedf4",
                         "surface-container-lowest": "#ffffff",
@@ -121,9 +124,10 @@
     class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
     <!-- Top Navigation Bar -->
     <header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm">
-        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+        <nav class="flex justify-between items-center px-4 md:px-8 py-4 max-w-7xl mx-auto gap-4">
             <div
-                class="text-xl md:text-2xl font-black text-blue-900 dark:text-blue-200 font-headline tracking-tight whitespace-nowrap">
+                class="flex items-center text-base xs:text-lg md:text-2xl font-black text-blue-900 dark:text-blue-200 font-headline tracking-tight whitespace-nowrap flex-shrink-0">
+                <img src="logo.png" alt="Logo" class="h-7 xs:h-8 md:h-10 w-auto mr-2 md:mr-3 object-contain" />
                 ACHIEVERS ACADEMY
             </div>
             <div class="hidden md:flex items-center space-x-8">
@@ -141,7 +145,7 @@
                     href="#contact">Contact</a>
             </div>
             <button onclick="window.open('https://wa.me/919676474723', '_blank')"
-                class="bg-primary text-on-primary px-4 md:px-6 py-2 rounded-xl font-bold hover:scale-95 duration-200 shadow-lg shadow-primary/20 transition-all text-sm md:text-base">
+                class="bg-primary text-on-primary px-3 md:px-6 py-2 rounded-xl font-bold hover:scale-95 duration-200 shadow-lg shadow-primary/20 transition-all text-xs md:text-base whitespace-nowrap flex-shrink-0">
                 Enroll Now
             </button>
         </nav>
@@ -547,13 +551,13 @@
                 <div class="space-y-4 text-slate-500 dark:text-slate-400">
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary">call</span>
-                        <span>9676474723 / 9384794087</span>
+                        <span>9676474723</span>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-[#10B981]">chat</span>
                         <div class="flex flex-col">
                             <span class="text-xs font-bold text-[#10B981] uppercase tracking-tighter">WhatsApp</span>
-                            <span>9676474723 / 9384794087</span>
+                            <span>9676474723</span>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
